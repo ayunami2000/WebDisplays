@@ -17,14 +17,16 @@ import org.apache.logging.log4j.Logger;
 public class Main implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("webdisplays");
 
-	public static final Block SCREEN_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f));
+	public static final Block SCREEN_BLOCK = new ScreenBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f));
 
 	public static BlockEntityType<ScreenBlockEntity> SCREEN_BLOCK_ENTITY;
 
+	public static Identifier screenBlockIdentifier = new Identifier("webdisplays", "screen_block");
+
 	@Override
 	public void onInitialize() {
-		Registry.register(Registry.BLOCK, new Identifier("webdisplays", "screen_block"), SCREEN_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("webdisplays", "screen_block"), new BlockItem(SCREEN_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, screenBlockIdentifier, SCREEN_BLOCK);
+		Registry.register(Registry.ITEM, screenBlockIdentifier, new BlockItem(SCREEN_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
 		SCREEN_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "webdisplays:screen_block_entity", FabricBlockEntityTypeBuilder.create(ScreenBlockEntity::new, SCREEN_BLOCK).build(null));
 		LOGGER.info("fard");
 	}

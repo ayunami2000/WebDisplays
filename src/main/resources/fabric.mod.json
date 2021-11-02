@@ -22,9 +22,7 @@
       "me.ayunami2000.webdisplays.Main"
     ],
     "client": [
-      {
-        "value": "me.ayunami2000.webdisplays.MainClient"
-      }
+      "me.ayunami2000.webdisplays.MainClient"
     ]
   },
   "mixins": [

@@ -4,23 +4,19 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.WorldRenderer;
-import net.minecraft.client.render.block.entity.BlockEntityRenderDispatcher;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.math.Vec3f;
+import net.minecraft.util.registry.Registry;
+
+import static me.ayunami2000.webdisplays.Main.screenBlockIdentifier;
 
 public class ScreenBlockEntityRenderer implements BlockEntityRenderer<ScreenBlockEntity> {
-    // A jukebox itemstack
-    private static ItemStack stack = new ItemStack(Items.JUKEBOX, 1);
+    private static ItemStack stack = new ItemStack(Registry.ITEM.get(screenBlockIdentifier), 1);
 
-    /*public ScreenBlockEntityRenderer(BlockEntityRenderDispatcher dispatcher) {
-        //super(dispatcher);
-        //super();
-    }*/
     public ScreenBlockEntityRenderer(BlockEntityRendererFactory.Context ctx) {
         //super();
     }
