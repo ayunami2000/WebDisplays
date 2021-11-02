@@ -1,4 +1,4 @@
-package me.ayunami2000.webdisplays;
+package me.ayunami2000.objviewer;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;

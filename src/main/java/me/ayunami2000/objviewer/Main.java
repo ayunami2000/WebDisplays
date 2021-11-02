@@ -1,4 +1,4 @@
-package me.ayunami2000.webdisplays;
+package me.ayunami2000.objviewer;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;

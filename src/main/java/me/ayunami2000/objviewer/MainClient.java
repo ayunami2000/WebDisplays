@@ -1,9 +1,9 @@
-package me.ayunami2000.webdisplays;
+package me.ayunami2000.objviewer;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 
-import static me.ayunami2000.webdisplays.Main.SCREEN_BLOCK_ENTITY;
+import static me.ayunami2000.objviewer.Main.SCREEN_BLOCK_ENTITY;
 
 public class MainClient implements ClientModInitializer {
     @Override

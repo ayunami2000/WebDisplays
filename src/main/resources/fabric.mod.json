@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "webdisplays",
+  "id": "objviewer",
   "version": "${version}",
 
-  "name": "WebDisplays",
-  "description": "remade in 1.17.1 fabric",
+  "name": "ObjViewer",
+  "description": "view OBJ files in game!",
   "authors": [
     "ayunami2000"
   ],
@@ -14,19 +14,19 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/webdisplays/icon.png",
+  "icon": "assets/objviewer/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.ayunami2000.webdisplays.Main"
+      "me.ayunami2000.objviewer.Main"
     ],
     "client": [
-      "me.ayunami2000.webdisplays.MainClient"
+      "me.ayunami2000.objviewer.MainClient"
     ]
   },
   "mixins": [
-    "webdisplays.mixins.json"
+    "objviewer.mixins.json"
   ],
 
   "depends": {
