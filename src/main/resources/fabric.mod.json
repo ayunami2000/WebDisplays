@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "webdisplays",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "WebDisplays",
+  "description": "remade in 1.17.1 fabric",
   "authors": [
-    "Me!"
+    "ayunami2000"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/ayunami2000/WebDisplays",
+    "sources": "https://github.com/ayunami2000/WebDisplays"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/webdisplays/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "me.ayunami2000.webdisplays.Main"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "webdisplays.mixins.json"
   ],
 
   "depends": {
@@ -33,6 +33,5 @@
     "java": ">=16"
   },
   "suggests": {
-    "another-mod": "*"
   }
 }
