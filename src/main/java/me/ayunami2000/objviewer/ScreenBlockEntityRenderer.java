@@ -7,20 +7,27 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.registry.Registry;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+
 import static me.ayunami2000.objviewer.Main.screenBlockIdentifier;
 
 public class ScreenBlockEntityRenderer implements BlockEntityRenderer<ScreenBlockEntity> {
     //private static ItemStack stack = new ItemStack(Registry.ITEM.get(screenBlockIdentifier), 1);
-    private static OBJLoader objItem = new OBJLoader();
 
     public ScreenBlockEntityRenderer(BlockEntityRendererFactory.Context ctx) {
-        objItem.loadModel();
-        //super();
+        //lol
     }
 
     @Override
     public void render(ScreenBlockEntity blockEntity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
-        matrices.push();
+        if(blockEntity.obj!=null){
+            matrices.push();
+            //do stuff here
+            blockEntity.objLoader.render(blockEntity.obj);
+            matrices.pop();
+        }
+        //matrices.push();
 
 
         /*
@@ -39,6 +46,6 @@ public class ScreenBlockEntityRenderer implements BlockEntityRenderer<ScreenBloc
 
 
         // Mandatory call after GL calls
-        matrices.pop();
+        //matrices.pop();
     }
 }
